@@ -198,7 +198,7 @@ FROM ms_pelanggan
 WHERE kode_pelanggan NOT IN (
 	SELECT kode_pelanggan
  	FROM tr_penjualan
-)
+);
 
 --Customers with transactions more than one
 SELECT t1.kode_transaksi,
@@ -214,6 +214,43 @@ HAVING jumlah_detail > 1;
 
 /* Project 3 : Fundamental SQL Group By and Having
 Created by Xeratic */
+
+--Cek table
+SELECT *
+FROM invoice
+LIMIT 3;
+
+SELECT *
+FROM subscription
+LIMIT 3;
+
+SELECT *
+FROM customer
+LIMIT 3;
+
+SELECT *
+FROM product
+LIMIT 3;
+
+--Cek amount of pinalty
+SELECT customer_id,
+	SUM(pinalty)
+FROM Invoice
+WHERE pinalty IS NOT NULL
+GROUP BY 1;
+
+--Customers whom change services
+SELECT t1.name, group_concat(t3.product_name)
+FROM customer t1 
+JOIN subscription t2 ON t1.id = t2.customer_id 
+JOIN product t3 ON t2.product_id = t3.id 
+WHERE t1.id IN (
+  SELECT customer_id
+  FROM subscription 
+  GROUP BY customer_id
+  HAVING COUNT(customer_id) > 1
+)
+GROUP BY t1.name;
 
 /* Project 4 : Data Analysis for B2B Retail: Customer Analytics Report
 Created by Trisna Yulia Junita, Data Scientist, PT. BUMA  */
