@@ -257,3 +257,9 @@ Created by Trisna Yulia Junita, Data Scientist, PT. BUMA  */
 
 /* Project 5 : Data Analysis for E-Commerce Challenge
 Created by DQLab */
+
+--There are four tables such as users, products, orders, order_details
+--The task is divided into 3 chapters, namely the data chapter, completing the SQL code and creating the SQL code
+
+/* Chapter 1 :  I have to download four excel files and then answer some multiple choices with MySQL and Tableau tools
+*/
