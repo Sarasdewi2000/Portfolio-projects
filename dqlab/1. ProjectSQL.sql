@@ -1,4 +1,5 @@
---Project Data Analysis for Retail: Sales Performance Report
+/* Project Data Analysis for Retail: Sales Performance Report
+Created by Nelda Ampulembang Parenta, Senior Data Analyst, Logisly */
 
 --Cek fields in the table dqlab_sales_store
 SHOW COLUMNS FROM dqlab_sales_store
