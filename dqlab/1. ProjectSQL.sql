@@ -1,4 +1,4 @@
-/* Project Data Analysis for Retail: Sales Performance Report
+/* Project 1 : Data Analysis for Retail: Sales Performance Report
 Created by Nelda Ampulembang Parenta, Senior Data Analyst, Logisly */
 
 --Cek fields in the table dqlab_sales_store
@@ -90,7 +90,7 @@ FROM (
 ) f
 GROUP BY 1;
 
-/* Data Engineer Challenge with SQL
+/* Project 2 : Data Engineer Challenge with SQL
 Created by Xeratic */
 
 --Multiple choice about LEFT JOIN, INNER JOIN
@@ -211,3 +211,12 @@ FROM tr_penjualan as t1
 	JOIN tr_penjualan_detail as t2 ON t1.kode_transaksi = t2.kode_transaksi
 GROUP BY 1,2,3,4
 HAVING jumlah_detail > 1;
+
+/* Project 3 : Fundamental SQL Group By and Having
+Created by Xeratic */
+
+/* Project 4 : Data Analysis for B2B Retail: Customer Analytics Report
+Created by Trisna Yulia Junita, Data Scientist, PT. BUMA  */
+
+/* Project 5 : Data Analysis for E-Commerce Challenge
+Created by DQLab */
